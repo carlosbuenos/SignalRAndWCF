@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+}
+<br /><br /><br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>Click the button to begin the test!</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-center">
+            <em><span class="text-info" style="font-size:x-large; font-weight:bold;" id="MessageSpan">&nbsp;</span></em>
+        </div>
+    </div>
+    <div class="row" style="padding-top:20px;">
+        <div class="col-md-8 col-md-offset-2 text-center">
+            <button id="StartTestButton" class="btn btn-success">Start Test!</button>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="/Scripts/jquery.signalR-2.2.0.min.js"></script>
+    <script src="/signalr/hubs"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var connectionId;
+
+            var testHub = $.connection.testHub;
+
+            testHub.client.showAlert = function (message) {
+                $("#MessageSpan").fadeOut(350, function () {
+                    $("#MessageSpan").text(message);
+                    $("#MessageSpan").fadeIn(350, function () { });
+                });
+            };
+
+            $.connection.hub.start().done(function () {
+                connectionId = $.connection.hub.id;
+
+                $("#StartTestButton").click(function () {
+                    $("#MessageSpan").text("Sending request to server...");
+                    testHub.server.longRunningTask(connectionId);
+                    $("#StartTestButton").prop("disabled", "disabled");
+                });
+            });
+        });
+    </script>
+}

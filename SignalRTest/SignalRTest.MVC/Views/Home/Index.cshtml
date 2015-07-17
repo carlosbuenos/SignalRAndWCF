@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">SignalR hosted in MVC with two way communication to a WCF client. (Requires Authentication)</p>
+    <p><a href="@Url.Action("Test")" class="btn btn-primary btn-lg">Test It! &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Requries Authentication</h2>
+        <p>
+            This sample assumes that users will be authenticated using Identity Framework.  All passwords are "Test123!".  There are 4 users stored in the local db.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Users</h2>
+        <p>
+            <ul>
+                <li>test@test.com</li>
+                <li>test2@test.com</li>
+                <li>test3@test.com</li>
+                <li>test4@test.com</li>
+            </ul>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Roles</h2>
+        <p>
+            There is only one role, "SpecialRole".  Test and Test4 do not belong to any role.  Test3 and Test4 belong to the SpecialRole.
+        </p>
+    </div>
+</div>

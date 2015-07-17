@@ -1,0 +1,8 @@
+C:\Github\SignalR WCF\SignalRTest\SignalRTest.WCF\bin\SignalRTest.WCF.dll.config
+C:\Github\SignalR WCF\SignalRTest\SignalRTest.WCF\bin\SignalRTest.WCF.dll
+C:\Github\SignalR WCF\SignalRTest\SignalRTest.WCF\bin\SignalRTest.WCF.pdb
+C:\Github\SignalR WCF\SignalRTest\SignalRTest.WCF\bin\RestSharp.dll
+C:\Github\SignalR WCF\SignalRTest\SignalRTest.WCF\bin\RestSharp.xml
+C:\Github\SignalR WCF\SignalRTest\SignalRTest.WCF\obj\Debug\SignalRTest.WCF.csprojResolveAssemblyReference.cache
+C:\Github\SignalR WCF\SignalRTest\SignalRTest.WCF\obj\Debug\SignalRTest.WCF.dll
+C:\Github\SignalR WCF\SignalRTest\SignalRTest.WCF\obj\Debug\SignalRTest.WCF.pdb
