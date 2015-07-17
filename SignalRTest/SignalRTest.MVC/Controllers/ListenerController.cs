@@ -42,7 +42,7 @@ WHERE                   r.Name = @rolename
                         } // end using
 
                         // Find what users from that role are currently connected
-                        List<String> ActiveUsersInRoleConnectionIds = Hubs.TestHub.UsersOnline.Where(x => UserIdsInRole.Contains(x.Value)).Select(y => y.Value).ToList();
+                        List<String> ActiveUsersInRoleConnectionIds = Hubs.TestHub.UsersOnline.Where(x => UserIdsInRole.Contains(x.Value)).Select(y => y.Key).ToList();
 
                         // Send the message to the users in that role who are currently connected
                         TestHub.Clients.Clients(ActiveUsersInRoleConnectionIds).showAlert(Message);
